@@ -1,0 +1,115 @@
+The below is the shell command history of the setup for one node of the 
+raspberry pi cluster from the beginning of a fresh install of 
+Raspberry Pi OS Lite 32-bit
+
+$ ping rossmanngroup.com
+$ sudo apt update && sudo apt upgrade -y
+$ sudo reboot
+$ sudo apt update && sudo apt install mpich -y
+$ which mpiexec
+$ mpiexec --version
+$ sudo nano /etc/hosts
+$ sudo cat /etc/hosts
+$ ping pi1 -c 3
+$ ping pi2 -c 3
+$ ping pi4 -c 3
+$ ssh-keygen
+$ cat /home/pi/.ssh/id_rsa.pub
+$ cat ~/.ssh/id_rsa.pub | ssh pi@192.0.0.87 "cat >> ~/.ssh/authorized_keys"
+$ ssh pi@192.0.0.87
+$ cat ~/.ssh/id_rsa.pub | ssh pi@192.0.0.114 "cat >> ~/.ssh/authorized_keys"
+$ ssh pi@192.0.0.114
+$ cat ~/.ssh/id_rsa.pub | ssh pi@192.0.0.213 "cat >> ~/.ssh/authorized_keys"
+$ ssh pi@192.0.0.213
+$ ssh pi@192.0.0.87
+$ ssh pi@192.0.0.114
+$ ssh pi@192.0.0.213
+$ nano hostfile-all.txt
+$ mpiexec -hostfile hostfile-all.txt hostname
+$ wget https://github.com/xianyi/OpenBLAS/releases/download/v0.3.29/OpenBLAS-0.3.29.tar.gz
+$ ls
+$ tar xfz OpenBLAS-0.3.29.tar.gz
+$ ls
+$ mkdir ˜/openblas-install
+$ ls
+$ mkdir ˜/openblas-install
+$ cd OpenBLAS-0.3.29/
+$ make -j4
+$ make install PREFIX=~/openblas-install
+$ ls ~/openblas-install/
+$ ls ~/openblas-install/lib/
+$ ls ~/openblas-install/include/
+$ cd
+$ wget https://www.netlib.org/benchmark/hpl/hpl-2.3.tar.gz
+$ tar xfz hpl-2.3.tar.gz
+$ ls
+$ cd hpl-2.3/setup
+$ sh make_generic
+$ ls
+$ sudo chmod +x make_generic
+$ ls -l make_generic
+$ sh make_generic
+$ ls
+$ ls -l make_generic
+$ cp Make.UNKNOWN ../Make.rpi
+$ cd
+$ cd hpl-2.3/
+$ nano Make.rpi
+$ make arch=rpi
+$ ls -l /home/rpimpi/mpi-install/lib/libmpich.so
+$ ls -l /home/rpimpi/mpi-install/lib/libmpich.so
+$ ls -l /home/rpimpi/mpi-install/lib/
+$ /home/rpimpi/mpi-install/lib/
+$ ls -l /home/rpimpi/mpi-install/lib/
+$ ls
+$ find / -type d -name "rpimpi" 2>/dev/null
+$ find / -type d -name "rpimpi" 2>/dev/null
+$ cd ~/..
+$ cd ..
+$ find / -type d -name "rpimpi" 2>/dev/null
+$ sudo find / -type d -name "rpimpi" 2>/dev/null
+$ find / -type f -name "libmpich.so" 2>/dev/null
+$ find /usr/lib /usr/local/lib /home -type f -name "libmpich.so" 2>/dev/null
+$ locate libmpich.so
+$ ldconfig -p | grep libmpich
+$ cd /lib/arm-linux-gnueabihf/libmpich.so
+$ cd /lib/arm-linux-gnueabihf/libmpich.so
+$ cd /lib/arm-linux-gnueabihf/
+$ ls
+$ clear
+$ ldconfig -p | grep libmpich
+$ cd /lib/arm-linux-gnueabihf
+$ cd ~/hpl-2.3/
+$ nano Make.rpi
+$ /lib/arm-linux-gnueabihf/
+$ cd /lib/arm-linux-gnueabihf/
+$ ls
+$ cd ~/hpl-2.3/
+$ nano Make.rpi
+$ find /usr/include -name "mpi.h" 2>/dev/null
+$ find /usr/include -name "mpi.h" 2>/dev/null
+$ nano Make.rpi
+$ make clean
+$ nano Make.rpi
+$ ldconfig -p | grep libmpich
+$ nano Make.rpi
+$ make arch=rpi -j4
+$ ls
+$ cd bin/rpi
+$ ls
+$ cd ..
+$ nano Make.rpi
+$ cd ~/hpl-2.3/bin/rpi
+$ rm HPL.dat
+$ nano HPL.dat
+$ ls
+$ cp ~/hostfile-all.txt .
+$ ls
+$ cat hostfile-all.txt
+$ htop
+$ watch vcgencmd measure_temp
+$ htop
+$ watch vcgencmd measure_temp
+$ rm HPL.dat
+$ nano HPL.dat
+$ mpiexec -env LD_LIBRARY_PATH "/home/pi/openblas-install/lib" -hostfile hostfile-all.txt ./xhpl
