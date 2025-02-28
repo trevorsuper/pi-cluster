@@ -1,4 +1,4 @@
-# pi-cluster
+# Raspberry Pi Cluster
 Weekend class project to create a 4 node cluster from raspberry pi model 4B 2GB RAM and a Gigabit ethernet switch<br>
 ![Cable](AtrociousCableManagement.JPG)
 <br>
