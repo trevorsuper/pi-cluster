@@ -3,7 +3,7 @@ Weekend class project to create a 4 node cluster from raspberry pi model 4B 2GB 
 <br>
 ![Cable](AtrociousCableManagement.JPG)
 <br>
-## Benchmark ##<br>
+## Benchmark<br>
 | Nodes | N | Time (seconds) | Gflops |
 | - | - | - | - |
 | 1 | 9984  | 46.98 | 1.4127e+01 |
