@@ -1,6 +1,5 @@
 # Raspberry Pi Cluster
 Weekend class project to create a 4 node cluster from raspberry pi model 4B 2GB RAM and a gigabit ethernet switch<br>
-![Cable](AtrociousCableManagement.JPG)
 ## Projects used:<br>
 https://github.com/pmodels/mpich<br>
 https://github.com/xianyi/OpenBLAS<br>
