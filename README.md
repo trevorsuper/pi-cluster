@@ -1,7 +1,7 @@
 # Raspberry Pi Cluster
 Weekend class project to create a 4 node cluster from raspberry pi model 4B 2GB RAM and a gigabit ethernet switch<br>
 <br>
-## Benchmark<br>
+Benchmark<br>
 | Nodes | N | Time (seconds) | Gflops |
 | - | - | - | - |
 | 1 | 9984  | 46.98 | 14.127 |
@@ -9,7 +9,7 @@ Weekend class project to create a 4 node cluster from raspberry pi model 4B 2GB 
 | 3 | 17664 | 245.62 | 14.961 |
 | 4 | 20352 | 255.00 | 22.042 |
 <br>
-## Projects used:<br>
+Projects used:<br>
 https://github.com/pmodels/mpich<br>
 https://github.com/xianyi/OpenBLAS<br>
 https://www.netlib.org/benchmark/hpl/<br>
