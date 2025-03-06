@@ -55,44 +55,6 @@ $ cp Make.UNKNOWN ../Make.rpi
 $ cd
 $ cd hpl-2.3/
 $ nano Make.rpi
-$ make arch=rpi
-$ ls -l /home/rpimpi/mpi-install/lib/libmpich.so
-$ ls -l /home/rpimpi/mpi-install/lib/libmpich.so
-$ ls -l /home/rpimpi/mpi-install/lib/
-$ /home/rpimpi/mpi-install/lib/
-$ ls -l /home/rpimpi/mpi-install/lib/
-$ ls
-$ find / -type d -name "rpimpi" 2>/dev/null
-$ find / -type d -name "rpimpi" 2>/dev/null
-$ cd ~/..
-$ cd ..
-$ find / -type d -name "rpimpi" 2>/dev/null
-$ sudo find / -type d -name "rpimpi" 2>/dev/null
-$ find / -type f -name "libmpich.so" 2>/dev/null
-$ find /usr/lib /usr/local/lib /home -type f -name "libmpich.so" 2>/dev/null
-$ locate libmpich.so
-$ ldconfig -p | grep libmpich
-$ cd /lib/arm-linux-gnueabihf/libmpich.so
-$ cd /lib/arm-linux-gnueabihf/libmpich.so
-$ cd /lib/arm-linux-gnueabihf/
-$ ls
-$ clear
-$ ldconfig -p | grep libmpich
-$ cd /lib/arm-linux-gnueabihf
-$ cd ~/hpl-2.3/
-$ nano Make.rpi
-$ /lib/arm-linux-gnueabihf/
-$ cd /lib/arm-linux-gnueabihf/
-$ ls
-$ cd ~/hpl-2.3/
-$ nano Make.rpi
-$ find /usr/include -name "mpi.h" 2>/dev/null
-$ find /usr/include -name "mpi.h" 2>/dev/null
-$ nano Make.rpi
-$ make clean
-$ nano Make.rpi
-$ ldconfig -p | grep libmpich
-$ nano Make.rpi
 $ make arch=rpi -j4
 $ ls
 $ cd bin/rpi
@@ -106,10 +68,6 @@ $ ls
 $ cp ~/hostfile-all.txt .
 $ ls
 $ cat hostfile-all.txt
-$ htop
-$ watch vcgencmd measure_temp
-$ htop
-$ watch vcgencmd measure_temp
 $ rm HPL.dat
 $ nano HPL.dat
 $ mpiexec -env LD_LIBRARY_PATH "/home/pi/openblas-install/lib" -hostfile hostfile-all.txt ./xhpl
